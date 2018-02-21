@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GetYourGuide</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  </head>
+  <body>
+    <div id="app">
+      <v-app dark id="search">
+        <v-container grid-list-xl text-xs-center>
+          <v-layout row wrap>
+            <v-flex xs12>
+              <v-text-field
+                v-model="search"
+                prepend-icon="search"
+                label="Search"
+                class="mx-3"
+              ></v-text-field>
+            </v-flex>
+            <v-flex xs12 v-if="search !== ''">
+              <v-card>
+                <v-data-table
+                  hide-actions
+                  :headers="headers"
+                  :items="items"
+                  :search="search"
+                >
+                  <template slot="items" slot-scope="props">
+                    <td>{{ props.item.title }}</td>
+                    <td>{{ props.item.price }}</td>
+                    <td>{{ props.item.currency }}</td>
+                    <td>{{ props.item.rating }}</td>
+                    <td>{{ props.item.isSpecialOffer }}</td>
+                  </template>
+                </v-data-table>
+              </v-card>
+            </v-flex>
+          <v-container grid-list-md text-xs-center>
+        <v-layout row wrap>
+      </v-app>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>

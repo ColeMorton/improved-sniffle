@@ -1,0 +1,21 @@
+{
+  "name": "getyourguide",
+  "version": "1.0.0",
+  "main": "./src/bundle.js",
+  "author": "Cole Morton",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "open ./dist/index.html"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.9",
+    "json-loader": "^0.5.7",
+    "style-loader": "^0.20.2",
+    "webpack": "^3.11.0"
+  },
+  "dependencies": {
+    "vue": "^2.5.13",
+    "vuetify": "^1.0.2"
+  }
+}
