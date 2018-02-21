@@ -12,7 +12,8 @@
           <v-layout row wrap>
             <v-flex xs12>
               <v-text-field
-                v-model="search"
+                v-on:keyup.enter="onFormSubmit"
+                v-model="searchText"
                 prepend-icon="search"
                 label="Search"
                 class="mx-3"
@@ -37,7 +38,7 @@
               </v-card>
             </v-flex>
           <v-container grid-list-md text-xs-center>
-        <v-layout row wrap>
+        </v-layout row wrap>
       </v-app>
     </div>
     <script src="bundle.js"></script>

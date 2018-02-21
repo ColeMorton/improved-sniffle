@@ -116,6 +116,7 @@ const app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   el: '#app',
   data () {
     return {
+      searchText: '',
       search: '',
       headers: [
         { text: 'Title', value: 'title' },
@@ -126,6 +127,11 @@ const app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
       ],
       items: __WEBPACK_IMPORTED_MODULE_3__data_json__["tours"]
     }
+  },
+  methods: {
+    onFormSubmit () {
+      this.search = this.searchText
+    },
   }
 })
 

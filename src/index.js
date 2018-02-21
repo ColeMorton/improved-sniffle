@@ -10,6 +10,7 @@ const app = new Vue({
   el: '#app',
   data () {
     return {
+      searchText: '',
       search: '',
       headers: [
         { text: 'Title', value: 'title' },
@@ -20,5 +21,10 @@ const app = new Vue({
       ],
       items: tours
     }
+  },
+  methods: {
+    onFormSubmit () {
+      this.search = this.searchText
+    },
   }
 })
